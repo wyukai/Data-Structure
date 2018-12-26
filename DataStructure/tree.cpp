@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Tree.h"
+#include "tree.h"
 using namespace std;
 
 Tree::Tree(int size, int *pRoot) {

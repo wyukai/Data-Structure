@@ -114,8 +114,10 @@
     <ClCompile Include="coordinate.cpp" />
     <ClCompile Include="customer.cpp" />
     <ClCompile Include="linkList.cpp" />
+    <ClCompile Include="linkTree.cpp" />
     <ClCompile Include="list.cpp" />
     <ClCompile Include="node.cpp" />
+    <ClCompile Include="nodeTree.cpp" />
     <ClCompile Include="person.cpp" />
     <ClCompile Include="queue.cpp" />
     <ClCompile Include="stack.cpp" />
@@ -126,8 +128,10 @@
     <ClInclude Include="coordinate.h" />
     <ClInclude Include="customer.h" />
     <ClInclude Include="linkList.h" />
+    <ClInclude Include="linkTree.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="node.h" />
+    <ClInclude Include="nodeTree.h" />
     <ClInclude Include="person.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="stack.h" />

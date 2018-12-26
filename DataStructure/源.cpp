@@ -5,7 +5,7 @@
 #include "coordinate.h"
 #include "list.h"
 #include "linkList.h"
-
+#include "linkTree.h"
 using namespace std;
 
 //常量定义
@@ -145,23 +145,66 @@ int main()
 	pList = NULL;*/
 	//*****************************************************
 	
-	/*Person person1 = Person("xiaowang", "1111");*/
-	Node node1;
-	node1.data.name = "test1";
-	node1.data.phone = "123456";
+
+
+	//*****************************************************
+
+
+
+	//*****************************************************
+
+
+	//*****************************************************
+	/*               (0)
+		    5(1)          8(2)
+      2(3)      6(4)   9(5)    7(6)*/
+
+    LinkTree *tree = new LinkTree();
 	
-	Node node2;
-	node2.data.name = "test2";
-	node2.data.phone = "123456";
+	NodeTree *node1 = new NodeTree();
+	node1->index = 1;
+	node1->data = 5;
+	NodeTree *node2 = new NodeTree();
+	node2->index = 2;
+	node2->data = 8;
+	NodeTree *node3 = new NodeTree();
+	node3->index = 3;
+	node3->data = 2;
+	NodeTree *node4 = new NodeTree();
+	node4->index = 4;
+	node4->data = 6;
+	NodeTree *node5 = new NodeTree();
+	node5->index = 5;
+	node5->data = 9;
+	NodeTree *node6 = new NodeTree();
+	node6->index = 6;
+	node6->data = 7;
 
-	LinkList *pList = new LinkList();
 
-	pList->ListInsertTail(&node1);
-	pList->ListInsertTail(&node2);
-	pList->ListTraverse();
+	tree->AddNode(0,0,node1);
+	tree->AddNode(0, 1, node2);
+	tree->AddNode(1, 0, node3);
+	tree->AddNode(1, 1, node4);
+	tree->AddNode(2, 0, node5);
+	tree->AddNode(2, 1, node6);
 
-	delete pList;
-	pList = NULL;
+	cout << "前序遍历" << endl;
+	tree->PreorderTraversal();
+	cout << "中序遍历" << endl;
+	tree->InorderTraversal();
+	cout << "后序遍历" << endl;
+	tree->PostorderTraversal();
+
+	
+	delete tree;
+	tree = NULL;
+		
+
+	//*****************************************************
+	
+	
+
+	
 	system("pause");
 	return 0;
 }
