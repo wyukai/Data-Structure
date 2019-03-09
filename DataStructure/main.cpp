@@ -19,13 +19,16 @@ int main()
 
 	MySearch search;
 	MySort sort;
-	vector<int> v= {3, 2, 1, 5, 4, 6};
-	sort.BucketSort(v,6);
+	vector<int> v= {2, 1, 3, 4, 5, 6};
+	sort.BubbleSortUpdate(v);
 	
-	
+	for (int i = 0; i < v.size(); i++)
+	{
+		cout << v[i] << endl;
+	}
 	finish = clock();
 	totalTime = (double)(finish - start) / CLOCKS_PER_SEC;
-	cout << "\n快速排序的运行时间为：" << totalTime << "秒。" << endl;
+	cout << "\n运行时间为：" << totalTime << "秒。" << endl;
 
 	/*
 	C++计时方法：C++中的计时函数是clock()，而与其相关的数据类型是clock_t（头文件是time.h）。函数定义原型为：clock_t clock(void);

@@ -26,8 +26,34 @@ void MySort::BubbleSort(vector<int>& v) {
 		}
 	}
 }
+//1.2 冒泡排序的改进版：增加了对flag的判断，可以避免已经有排序的情况下的无意义循环判断
+/*
+当最好的情况，也就是排序的表本身就是有序的，只是进行了n-1次的比较，没有数据交换所以时间复杂度为O(n)
+当最坏的情况，也就是排序为逆序的情况，需要比较1+2+3+...+(n-1)=n(n-1)/2次，并且需要作等数量级的移动，
+所以时间复杂度为O(n*n);
+*/
+void MySort::BubbleSortUpdate(vector<int>& v) {
+	int length = v.size();
+	
+	bool flag = true; //flag用来标记每一次冒泡的过程中是否存在数据交换
+
+	for (int i = 0; i < length-1&&flag; i++)
+	{
+		flag = false;
+		for (int j = 0; j < length-1-i; j++)
+		{
+			if (v[j] > v[j + 1]) {
+				swap(v[j], v[j + 1]);
+				flag = true;              //如果有数据交换，则flag为true
+			}
+		}
+	}
+}
 
 //2. 快速排序
+/*
+
+*/
 void MySort::QuickSort(vector<int>& v, int left, int right) {
 	//递归结束条件
 	if (left > right) {
@@ -67,7 +93,7 @@ void MySort::QuickSort(vector<int>& v, int left, int right) {
 	QuickSort(v, first + 1, right);
 }
 
-//3. 桶排序
+//3. 桶排序 时间复杂度O(M+N)，很快,但其空间利用率低
 void MySort::BucketSort(vector<int>& v,int size) {
 	//定义桶
 	vector<int> bucket(size+1);
@@ -86,5 +112,33 @@ void MySort::BucketSort(vector<int>& v,int size) {
 		for (int j = 0; j < bucket[i]; j++) {
 			cout << i<<endl;
 		}
+	}
+}
+
+//4.简单选择排序  时间复杂度为O(n*n)
+/*
+无论最好最差的情况，其比较次数是一样多的，都为1+2+3+...+(n-1)=n(n-1)/2次
+对于数据交换次数而言，最好的情况下（已排序状态），交换次数为0次，
+最差的情况(初始状态为逆序)，交换次数为n-1次，所以最终的时间复杂度为O(n*n)
+*/
+void MySort::SelectSort(vector<int>& v) {
+	int length = v.size();
+	if (length <= 0) {
+		return;
+	}
+	
+	int i, j;
+	for ( i= 0; i < length; i++) {
+		int min = i;					//将当前下标定义为最小值下标
+		for (j = i+1; j < length; j++)
+		{
+			if (v[min] > v[j]) {        //如果有小于当前最小值的值
+				min = j;			    //将此值的下标赋给min
+			}
+		}
+		if (min != i) {					//如果min!=i,说明找到了最小值，交换
+			swap(v[i], v[min]);
+		}
+		
 	}
 }

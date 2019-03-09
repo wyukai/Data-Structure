@@ -7,8 +7,10 @@ class MySort
 public:
 	
 	void BubbleSort(vector<int>& v);
+	void BubbleSortUpdate(vector<int>& v);
 	void QuickSort(vector<int>& v,int low,int high);
 	void BucketSort(vector<int>& v,int size);
+	void SelectSort(vector<int>& v);
 private:
 
 };
