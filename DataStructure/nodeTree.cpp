@@ -12,6 +12,7 @@ NodeTree::NodeTree() {
 
 }
 
+
 NodeTree *NodeTree::SearchNode(int nodeIndex) {
 	if (this->index == nodeIndex) {
 		return this;
@@ -48,6 +49,11 @@ NodeTree *NodeTree::SearchNode(int nodeIndex) {
 }
 
 void NodeTree::DeleteNode() {
+
+	cout << "hahahahhah"<<this->index << endl;
+	cout << "hahahahhah" << this->data << endl;
+
+
 	if (this->pLChild!=NULL)
 	{
 		this->pLChild->DeleteNode();
@@ -55,12 +61,19 @@ void NodeTree::DeleteNode() {
 	if (this->pRChild != NULL) {
 		this->pRChild->DeleteNode();
 	}
+	cout << this->pParent << endl;;
 	if (this->pParent != NULL) {
-		if (this->pParent->pLChild==this)
+		cout << "²âÊÔ" << endl;
+		cout << this->pParent->pLChild->index <<endl;
+		cout << this->index << endl;
+		int a = this->pParent->pLChild->index;
+		int b = this->index;
+		if (a==b)
 		{
+			cout << "²âÊÔ" << endl;
 			this->pParent->pLChild == NULL;
 		}
-		if (this->pParent->pRChild == this)
+		if (this->pParent->pRChild->index == this->index)
 		{
 			this->pParent->pRChild == NULL;
 		}

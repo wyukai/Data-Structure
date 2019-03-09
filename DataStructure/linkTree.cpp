@@ -1,6 +1,7 @@
 #include "linkTree.h"
 #include <stdlib.h>
 #include <iostream>;
+using namespace std;
 
 LinkTree::LinkTree()
 {
@@ -10,6 +11,7 @@ LinkTree::LinkTree()
 
 LinkTree::~LinkTree()
 {
+	cout << "Î÷¹µ" << endl << endl;
 	DeleteNode(0,NULL);//m_pRoot->DeleteNode();
 }
 
@@ -44,6 +46,9 @@ bool LinkTree::AddNode(int nodeIndex, int direction, NodeTree *pNode) {
 }
 bool LinkTree::DeleteNode(int nodeIndex, NodeTree *pNode) {
 	NodeTree *temp = SearchNode(nodeIndex);
+
+	cout << temp->index << "   "<<temp->data << endl;
+
 	if (temp == NULL) {
 		return false;
 	}

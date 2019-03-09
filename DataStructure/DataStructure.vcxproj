@@ -120,9 +120,12 @@
     <ClCompile Include="nodeTree.cpp" />
     <ClCompile Include="person.cpp" />
     <ClCompile Include="queue.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="sort.cpp" />
     <ClCompile Include="stack.cpp" />
+    <ClCompile Include="stackFunc.cpp" />
     <ClCompile Include="tree.cpp" />
-    <ClCompile Include="源.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="coordinate.h" />
@@ -134,7 +137,10 @@
     <ClInclude Include="nodeTree.h" />
     <ClInclude Include="person.h" />
     <ClInclude Include="queue.h" />
+    <ClInclude Include="search.h" />
+    <ClInclude Include="sort.h" />
     <ClInclude Include="stack.h" />
+    <ClInclude Include="stackFunc.h" />
     <ClInclude Include="tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

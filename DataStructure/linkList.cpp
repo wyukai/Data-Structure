@@ -7,7 +7,7 @@ using namespace std;
 
 LinkList::LinkList() {
 	//初始化一个头节点
-	m_pList = new Node;
+	m_pList = new Node();
 	/*m_pList->data = 0;*/
 	m_pList->next = NULL;
 	//只有头节点的链表 长度为0
