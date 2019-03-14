@@ -60,6 +60,9 @@
     <ClCompile Include="sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="binaryTree.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="queue.h">

@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="binaryTree.h" />
     <ClCompile Include="coordinate.cpp" />
     <ClCompile Include="customer.cpp" />
     <ClCompile Include="linkList.cpp" />
