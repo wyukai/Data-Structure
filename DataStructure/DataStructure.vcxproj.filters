@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\动态规划问题">
+      <UniqueIdentifier>{3c2d0e83-62e2-4a9a-982c-0751ff3947ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="queue.cpp">
@@ -63,6 +66,12 @@
     <ClCompile Include="binaryTree.h">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="dp.cpp">
+      <Filter>源文件\动态规划问题</Filter>
+    </ClCompile>
+    <ClCompile Include="Leetcode2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="queue.h">
@@ -106,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="sort.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dp.h">
+      <Filter>源文件\动态规划问题</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
