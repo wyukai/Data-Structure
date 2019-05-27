@@ -72,6 +72,9 @@
     <ClCompile Include="Leetcode2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Leetcode3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="queue.h">
